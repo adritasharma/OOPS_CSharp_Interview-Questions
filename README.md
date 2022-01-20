@@ -9,6 +9,7 @@
   
   <li>
     <b>Class </b>
+    
 Class is a user defined data type, which consists of data & behaviour
 Class data is represented by field and behaviour is represented by methods
 It holds its own data members and member functions, which can be accessed and used by creating instance of that class
@@ -17,7 +18,7 @@ It holds its own data members and member functions, which can be accessed and us
   </li>
   
    <li>
-    <b>**Object** </b>
+    <b>Object</b>
 
 Object is They are instance of classes. It is a basic unit of a system. 
 An object is an entity that has attributes, behavior, and identity. 
@@ -34,15 +35,52 @@ The new operator is used to create an object of a class.
 - Abstraction
 </li>
   
-   <li>
-    <b> </b>
+<li>
+<b>Polymorphism  </b>
+     
+Polymorphism means one name, many forms. One function behaves in different forms
 
+There are two types of polymorphism:
+     
+- Static or compile time polymorphism
+		The mechanism of linking a function with an object during compile time is called static binding.
+		There are two techniques to implement static polymorphism:
+     
+   Function overloading
+        Method overloading is a concept where a class can have more than one method with the same name and different parameters
+        Operator overloading
+     
+- Dynamic or runtime polymorphism
+
+  Run-time polymorphism is achieved by method overriding. Method overriding allows us to have methods in the base and derived classes with the same name and the same parameters
   
   </li>
   
-   <li>
-    <b> </b>
-
+<li>
+ <b>Inheritance</b>
+  
+Acquiring the properties of one class into another class is called inheritance. Inheritance provides reusability by allowing us to extend an existing class
+The inheritance concept is based on a base class and derived class.
+  
+- Base class - is the class from which features are to be inherited into another class.
+- Derived class - it is the class in which the base class features are inherited.
+  
+Types of Inheritance:
+  
+- Single inheritance 
+  
+In this type of inheritance one derived class inherits from only one base class.
+Hierarchical inheritance
+In this type of inheritance, multiple derived classes inherit from a single base class.
+ 
+ 
+- Multilevel inheritance
+In this type of inheritance the derived class inherits from a class, which in turn inherits from some other class. The Super class for one, is sub class for the other.
+ 
+ 
+- Multiple inheritance 
+  
+In this type of inheritance a single derived class may inherit from two or more than two base classes.This inheritance is not supported by C#.
   
   </li>
 </ol>
