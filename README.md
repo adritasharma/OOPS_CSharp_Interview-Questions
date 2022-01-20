@@ -171,6 +171,117 @@ If we inherit a class into the derived class and provide a definition for one of
 
 </li>
 <li>
-		
+
+**Constructor**
+	
+Constructor(s) in a class is/are special methods which get called automatically when an object of a class is created. The main use of constructors is to initialize private fields of the class while creating an instance for the class. 
+Some of the key points regarding the Constructor are:
+ 
+A class can have any number of constructors.
+A constructor doesn't have any return type, not even void.
+A static constructor cannot be a parameterized constructor.
+	
+Within a class you can create only one static constructor. 
+	
+Constructors can be divided into **5** types:
+	
+- **Default Constructor** : A constructor without any parameters which is called automatically when we do not declare any constructor  is called a default constructor.
+
+The default constructor initializes:
+All numeric fields in the class to zero.
+All string and object fields to null.
+ 
+- **Parameterized Constructor** : A constructor with at least one parameter is called a parameterized constructor. This can also be called as constructor overloading.
+Note: Default constructors always initialize the objects with the same values. In case we want to initialize the class with different values, we can use Parameterized constructors.
+	
+- **Copy Constructor**: The constructor which creates an object by copying variables from another object is called a copy constructor.It allows us to initialize a new object with the existing object values.
+	
+	Person p1 = new Person(1, "Adrita", "Sharma", "Dimapur");//Instance constructor.
+	Person p2 = new Person(p1); // Copy Constructor
+
+- **Static Constructor**: Static constructor is used to initialize the static data members of the class. A static constructor does not take access modifiers or have parameters.
+
+	 class employee
+	 {  
+		static employee(){}
+	 }
+	
+- **Private Constructor** : When a constructor is created with a private specifier, it is not possible for other classes to derive from this class, neither is it possible to create an instance of this class. They are usually used in classes that contain static members only. 
+ 
+**Constructor Overloading **
+We can overload constructor by creating another constructor with same method name and different parameters 
+	
+</li>
+<li>
+	
+**Destructor**
+
+A destructor is a special method for a class and is invoked automatically when an object is finally destroyed. 
+In C# you can never call them, the reason is one cannot destroy an object. .NET frameworks Garbage Collector (GC) has the control over the destructor.  
+The name of the destructor is also same as that of the class but is followed by a prefix tilde (~).
+
+</li>
+<li>
+	
+**Static Class**
+	
+A static class cannot be instantiated or inherited. Static classes provide static methods which can be used without creating instance of that class. Eg. calculation formula methods. ConvertToDollar()
+	
+</li>
+<li>	
+	
+**Sealed Class**
+	
+A sealed class is a class that cannot be inherited by any class but can be instantiated. A sealed class is often used to encapsulate a logic that needs to be used across the program but without any alteration to it.
+	
+</li>
+<li>
+	
+**Abstract Class**
+	
+Abstract class is a special type of class which cannot be instantiated (i.e we cannot create an object of an abstract class) and acts as a base class for other classes. It is defined using "abstract" keyword.
+The purpose of an abstract class is to provide basic or default functionality as well as common functionality that multiple derived classes can share and override.
+It should have at least one method defined as abstract.
+	
+</li>
+<li>
+	
+**Abstract method**
+	
+When a class contains an abstract method, that class must be declared as abstract. The abstract method has no implementation and thus, classes that derive from that abstract class, must provide an implementation for this abstract method.
+
+</li>
+<li>
+	
+**Virtual method**
+	
+A class can have a virtual method. The virtual method has an implementation. When we inherit from a class that has a virtual method, we can override the virtual method and provide additional logic, or replace the logic with your own implementation.
+
+</li>
+<li>
+	
+**Interface**
+	
+An interface looks like a class, but has no implementation. It contains declarations of methods and/or properties. Interfaces are inherited by classes, that must provide an implementation for each interface member declared.
+
+</li>
+<li>
+	
+**Difference between Abstract Class and Interface**
+	
+- Abstract class can have implementation for some of it’s member but interface cannot have implementation for any of its member
+- Abstract class members are private by default and can have Access modifiers. But Interface members are public default and cannot have access modifiers.
+- An interface can inherit from an interface only and cannot inherit from any class, but abstract class can inherit from any other abstract class as well as Interface
+- A class can inherit from multiple interface but not multiple class.
+- Interface cannot have fields but Abstract class can have fields.
+	
+</li>
+<li>
+	
+**Similarities between Abstract Class and Interface**
+	
+- We cannot create instance of Abstract class as well as Interface
+- Both of them act as base type.
+- Both of them are incomplete.
 	
 </ol>
