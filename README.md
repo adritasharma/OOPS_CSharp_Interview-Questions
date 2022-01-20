@@ -68,19 +68,27 @@ The inheritance concept is based on a base class and derived class.
 Types of Inheritance:
   
 - Single inheritance 
-  
 In this type of inheritance one derived class inherits from only one base class.
-Hierarchical inheritance
+	
+    ![image](https://user-images.githubusercontent.com/29271635/150377971-66d3b295-3532-4c58-9aa7-b59001e89970.png)
+
+	
+
+- Hierarchical inheritance
 In this type of inheritance, multiple derived classes inherit from a single base class.
+    ![image](https://user-images.githubusercontent.com/29271635/150377762-902d4cea-14a4-49a6-bb46-30e3a346cad8.png)
  
  
 - Multilevel inheritance
 In this type of inheritance the derived class inherits from a class, which in turn inherits from some other class. The Super class for one, is sub class for the other.
  
+    ![image](https://user-images.githubusercontent.com/29271635/150377604-fc1baff7-5bef-4b74-a667-c608b58e73da.png)
+
  
 - Multiple inheritance 
-  
 In this type of inheritance a single derived class may inherit from two or more than two base classes.This inheritance is not supported by C#.
   
+    ![image](https://user-images.githubusercontent.com/29271635/150377497-a6a1764f-cfda-4b6c-9112-9ca3df90e9d3.png)
+	
   </li>
 </ol>
