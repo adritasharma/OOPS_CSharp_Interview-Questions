@@ -284,4 +284,59 @@ An interface looks like a class, but has no implementation. It contains declarat
 - Both of them act as base type.
 - Both of them are incomplete.
 	
+</li>	
+<li>
+	
+**Coupled Code**
+	
+- Tightly Coupled:
+		Group of classes highly dependent on one another.
+- Loosely Coupled:
+		Reducing dependencies of a class that uses different classes directly.
+- Advantages of Loosely Coupled:
+		Code Reusability
+		Easier to maintain
+		Easier for Unit Testing
+
+</li>	
+<li>
+	
+**Inversion of Control (IoC)**
+	
+The term Inversion of Control (IoC) refers to a programming style where the flow of a program has been inverted. i.e ClassA doesn’t control its dependency (create or fetch ClassB object), Here, dependencies are instantiated by a framework or runtime and supplied to the desired class as needed.
+	
+In .NET 4.5
+	
+	var container = new UnityContainer(); 
+	container.RegisterType<IFileSaver, FileSaverAWS>();
+ 
+In .NET Core, ( ConfigureServices Method in startup.cs file)
+	
+	services.AddScoped(typeof(IFileSaver), typeof(FileSaverAWS));
+
+### “Inversion of control is principal and Dependency Injection is implementation”.
+	
+
+<li>
+	
+**Dependency Injection**
+	
+Software Design pattern that allows us to develop loosely coupled code i.e Reduced dependency on class that use or inherit other classes.
+Interfaces are used to implement loose coupling.
+Classes communicate through (inherit) interface rather than classes.
+ 
+Eg:
+SaveFile Functionality.
+	
+UserController has a function to save files. A class is created FileSaver.cs which has a fn `SaveFile()`.
+	
+Without DI:
+	
+	class UserController {
+		Public UserController() {
+		   FileSaver filesSaver = new FileSaver();
+		}
+	}
+
+	
 </ol>
