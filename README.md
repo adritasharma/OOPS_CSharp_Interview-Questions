@@ -285,6 +285,44 @@ An interface looks like a class, but has no implementation. It contains declarat
 - Both of them are incomplete.
 	
 </li>	
+
+<li>
+	
+**Delegate**
+	
+A delegate is a reference type variable that holds the reference to a method. The reference can be changed at runtime
+
+The following Func delegate takes two input parameters of int type and returns a value of int type:
+
+	Func<int, int, int> sum;
+	
+We can **assign any method to the above func delegate**
+	that takes two int parameters and returns an int value.
+
+Example: Func
+	
+	class Program
+	{
+	    static int Sum(int x, int y)
+	    {
+		return x + y;
+	    }
+
+	    static void Main(string[] args)
+	    {
+		Func<int,int, int> add = Sum;
+
+		int result = add(10, 10);
+
+		Console.WriteLine(result); 
+	    }
+	}
+	
+</li>	
+
+<li>
+	
+**Generics**
 <li>
 	
 **Coupled Code**
@@ -337,6 +375,8 @@ Without DI:
 		   FileSaver filesSaver = new FileSaver();
 		}
 	}
+	
+
 
 	
 </ol>
