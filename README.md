@@ -323,7 +323,17 @@ Example: Func
 <li>
 	
 **Generics**
+	
+Generic is a concept that allows us to define classes and methods with placeholder. C# compiler replaces these placeholders with specified Type at compile time. The concept of generics is used to create general purpose classes and methods.
+To define a generic class, we must use angle <> brackets. The angle brackets are used to declare a class or method as generic type
+
+	public T GetData(int index)
+	
 <li>
+	
+## Collection
+	
+## Dependency Management
 	
 **Coupled Code**
 	
