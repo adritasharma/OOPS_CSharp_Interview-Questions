@@ -196,8 +196,8 @@ Note: Default constructors always initialize the objects with the same values. I
 	
 - **Copy Constructor**: The constructor which creates an object by copying variables from another object is called a copy constructor.It allows us to initialize a new object with the existing object values.
 	
-	Person p1 = new Person(1, "Adrita", "Sharma", "Dimapur");//Instance constructor.
-	Person p2 = new Person(p1); // Copy Constructor
+	  Person p1 = new Person(1, "Adrita", "Sharma", "Dimapur");//Instance constructor.
+	  Person p2 = new Person(p1); // Copy Constructor
 
 - **Static Constructor**: Static constructor is used to initialize the static data members of the class. A static constructor does not take access modifiers or have parameters.
 
@@ -283,6 +283,27 @@ An interface looks like a class, but has no implementation. It contains declarat
 - We cannot create instance of Abstract class as well as Interface
 - Both of them act as base type.
 - Both of them are incomplete.
+
+**Explicit interface implementation**
+	
+If we have a class that inherits 2 Interfaces that have the same method signature we use explicit interface implementation to distinguish between the methods.
+	
+		interface I1 {
+		    void printMethod();
+		}
+
+		interface I2 {
+		    void printMethod();
+		}
+ 
+		// class C implements two interfaces
+		class C : I1, I2 {
+		    // Explicitly implements method of I2
+		    void I2.printMethod()
+		    {
+			Console.WriteLine("I2 printMethod");
+		    }
+		}
 	
 </li>	
 
@@ -448,6 +469,7 @@ Without DI:
 	
 </li>	
 <li>
+	
 **Life cycle of Dependency Injection (DI)**
 	
 To implement dependency injection, we need to configure a DI container with classes that is participating in DI. DI Container has to decide whether to return a new instance of the service or provide an existing instance. In startup class, we perform this activity on ConfigureServices method.
