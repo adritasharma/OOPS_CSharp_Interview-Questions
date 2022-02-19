@@ -333,6 +333,40 @@ To define a generic class, we must use angle <> brackets. The angle brackets are
 	
 ## Collection
 	
+	![image](https://user-images.githubusercontent.com/29271635/154806151-88b1e4fb-48fb-487a-8b3c-108ad032f049.png)
+
+	
+<li>
+	
+- **IEnumerable**
+	
+We use IEnumerable when you want to iterate over the items in a collection
+	
+- **IList**
+	
+IList is when we want to add, remove, and access the list contents out of order
+	
+- **IQueryable**
+	
+We use IQueryable when we want only required records to be returned to client from SQL. Here filter gets applied in RDBMS
+	
+If we use IEnumerable and add filter, all records will go to client side and then the filter will get applied in memory.
+	
+	IEnumerable<Employee> emps = db.Employees.Where(x => x.EmpId == 2).ToList()
+	
+	-- SQL Query in Profiler:
+	SELECT * FROM EMPLOYEES
+	
+	IQueryable<Employee> emps = db.Employees.Where(x => x.EmpId == 2).ToList()
+	
+	-- SQL Query in Profiler:
+	SELECT * FROM EMPLOYEES WHERE EmpId = 2
+	
+	
+Difference between IEnumerable and IQueryable is where the filter logic gets executed. If we are working with collection that are connected to database, then use IQueryable.
+If we are working with in memory data collection, use IEnumerable.
+	
+	
 ## Dependency Management
 	
 <li>
@@ -405,7 +439,7 @@ Without DI:
 	
 </li>	
 <li>
-**Life cycle of Dependency Injection (DI) **
+**Life cycle of Dependency Injection (DI)**
 	
 To implement dependency injection, we need to configure a DI container with classes that is participating in DI. DI Container has to decide whether to return a new instance of the service or provide an existing instance. In startup class, we perform this activity on ConfigureServices method.
 
