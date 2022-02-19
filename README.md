@@ -333,20 +333,29 @@ To define a generic class, we must use angle <> brackets. The angle brackets are
 	
 ## Collection
 	
-	![image](https://user-images.githubusercontent.com/29271635/154806151-88b1e4fb-48fb-487a-8b3c-108ad032f049.png)
+![image](https://user-images.githubusercontent.com/29271635/154806151-88b1e4fb-48fb-487a-8b3c-108ad032f049.png)
 
 	
 <li>
 	
 - **IEnumerable**
 	
-We use IEnumerable when you want to iterate over the items in a collection
+An IEnumerable is a list or a container which can hold some items. We can iterate through each element in the IEnumerable. We **cannot edit** the items like adding, deleting, updating, etc.
+We have to iterate over the elements to get the count of items.
+	
+- **ICollection**
+	
+ICollection derives from IEnumerable and extends it’s functionality to add, remove, update element in the list. ICollection also holds the count of elements
 	
 - **IList**
 	
-IList is when we want to add, remove, and access the list contents out of order
+IList extends ICollection. An IList can perform all operations combined from IEnumerable and ICollection (iterate, add, update, remove), and some more operations like inserting or removing an element in the middle of a list
+	
+We should use IList when we need access by index to your collection, add, update and delete elements. IEnumerable when we just need to enumerate over the collection.
 	
 - **IQueryable**
+	
+IQueryable extends ICollection. An IQueryable generates a LINQ to SQL expression that is executed over the database layer
 	
 We use IQueryable when we want only required records to be returned to client from SQL. Here filter gets applied in RDBMS
 	
@@ -454,5 +463,7 @@ Singleton lifetime services are created the first time they are requested
 	
 ![image](https://user-images.githubusercontent.com/29271635/154804600-8ed9ee27-0977-4fda-80a0-7ce31534e8a0.png)
 
+## Async vs Threads
 	
+<li>	
 </ol>
