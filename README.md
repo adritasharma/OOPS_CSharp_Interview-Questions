@@ -329,11 +329,13 @@ To define a generic class, we must use angle <> brackets. The angle brackets are
 
 	public T GetData(int index)
 	
-<li>
+
 	
 ## Collection
 	
 ## Dependency Management
+	
+<li>
 	
 **Coupled Code**
 	
@@ -363,7 +365,8 @@ In .NET Core, ( ConfigureServices Method in startup.cs file)
 	services.AddScoped(typeof(IFileSaver), typeof(FileSaverAWS));
 
 ### “Inversion of control is principal and Dependency Injection is implementation”.
-	
+
+</li>
 
 <li>
 	
@@ -372,6 +375,7 @@ In .NET Core, ( ConfigureServices Method in startup.cs file)
 Software Design pattern that allows us to develop loosely coupled code i.e Reduced dependency on class that use or inherit other classes.
 Interfaces are used to implement loose coupling.
 Classes communicate through (inherit) interface rather than classes.
+
  
 Eg:
 SaveFile Functionality.
@@ -381,12 +385,40 @@ UserController has a function to save files. A class is created FileSaver.cs whi
 Without DI:
 	
 	class UserController {
-		Public UserController() {
+		public UserController() {
 		   FileSaver filesSaver = new FileSaver();
 		}
 	}
 	
+Without DI:
+	
+	class UserController {
+	
+		private readonly IFileSaver _filesSaver;
 
+		public UserController(IFileSaver filesSaver) {
+		   _filesSaver = filesSaver;
+		}
+	}
+	
+
+	
+</li>	
+<li>
+**Life cycle of Dependency Injection (DI) **
+	
+To implement dependency injection, we need to configure a DI container with classes that is participating in DI. DI Container has to decide whether to return a new instance of the service or provide an existing instance. In startup class, we perform this activity on ConfigureServices method.
+
+- AddTransient
+Transient lifetime services are created each time they are requested. This lifetime works best for lightweight, stateless services.
+
+- AddScoped
+Scoped lifetime services are created once per request.
+
+- AddSingleton
+Singleton lifetime services are created the first time they are requested 
+	
+![image](https://user-images.githubusercontent.com/29271635/154804600-8ed9ee27-0977-4fda-80a0-7ce31534e8a0.png)
 
 	
 </ol>
