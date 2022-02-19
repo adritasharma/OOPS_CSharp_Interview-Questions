@@ -485,7 +485,13 @@ Singleton lifetime services are created the first time they are requested
 	
 ![image](https://user-images.githubusercontent.com/29271635/154804600-8ed9ee27-0977-4fda-80a0-7ce31534e8a0.png)
 
-## Async vs Threads
+## Multi Threading
+	
+**Concurrency** : Concurrency means executing multiple tasks on same core.We have time slicing. Given Some time to T1 and switch to giving time to T2
+**Parallelism** : Parallelism means executing multiple tasks on multiple cores  (hardware - can be multiple core/machine)
+	
+Concurrency is used to make our code non blocking. If we have a background task, the other task should not hang. Parallelism enhances paerformance.
+	
 	
 <li>	
 </ol>
