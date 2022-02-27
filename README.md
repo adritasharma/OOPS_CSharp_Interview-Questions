@@ -288,22 +288,22 @@ An interface looks like a class, but has no implementation. It contains declarat
 	
 If we have a class that inherits 2 Interfaces that have the same method signature we use explicit interface implementation to distinguish between the methods.
 	
-		interface I1 {
-		    void printMethod();
-		}
+	interface I1 {
+	    void printMethod();
+	}
 
-		interface I2 {
-		    void printMethod();
-		}
- 
-		// class C implements two interfaces
-		class C : I1, I2 {
-		    // Explicitly implements method of I2
-		    void I2.printMethod()
-		    {
-			Console.WriteLine("I2 printMethod");
-		    }
-		}
+	interface I2 {
+	    void printMethod();
+	}
+
+	// class C implements two interfaces
+	class C : I1, I2 {
+	    // Explicitly implements method of I2
+	    void I2.printMethod()
+	    {
+		Console.WriteLine("I2 printMethod");
+	    }
+	}
 	
 </li>	
 
@@ -487,7 +487,8 @@ Singleton lifetime services are created the first time they are requested
 
 ## Multi Threading
 	
-<li>	
+<li>
+	
 **Thread**
 	
 A thread is defined as the execution path of a program. Each thread defines a unique flow of control.
@@ -496,12 +497,14 @@ It is a basic unit of CPU utilization. Thread has its own program area and memor
 </li>
 	
 <li>
+	
 **Task**
 	
 A task is an object that represents some work that should be done. The task can tell if the work is completed and if the operation returns a result, the task gives you the result.
 </li>
 	
 <li>
+	
 **Multithreading**
 	
 Multithreading is a process in which multiple threads work simultaneously. It is a process to achieve multitasking. It saves time because multiple tasks are being executed at a time.	
