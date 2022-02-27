@@ -487,11 +487,34 @@ Singleton lifetime services are created the first time they are requested
 
 ## Multi Threading
 	
+<li>	
+**Thread**
+	
+A thread is defined as the execution path of a program. Each thread defines a unique flow of control.
+	
+It is a basic unit of CPU utilization. Thread has its own program area and memory area . A thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler. Threads are built into operating system. The thread class from .NET is just a way to create and manage threads. Threads can themselves split into two or more simultaneously running tasks .	
+</li>
+	
+<li>
+**Task**
+	
+A task is an object that represents some work that should be done. The task can tell if the work is completed and if the operation returns a result, the task gives you the result.
+</li>
+	
+<li>
+**Multithreading**
+	
+Multithreading is a process in which multiple threads work simultaneously. It is a process to achieve multitasking. It saves time because multiple tasks are being executed at a time.	
+</li>	
+	
+	
+
+<li>		
 **Concurrency** : Concurrency means executing multiple tasks on same core.We have time slicing. Given Some time to T1 and switch to giving time to T2
 **Parallelism** : Parallelism means executing multiple tasks on multiple cores  (hardware - can be multiple core/machine)
 	
 Concurrency is used to make our code non blocking. If we have a background task, the other task should not hang. Parallelism enhances paerformance.
+</li>	
 	
-	
-<li>	
+
 </ol>
